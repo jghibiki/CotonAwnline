@@ -20,9 +20,16 @@ public class PlayerMove : NetworkBehaviour {
 	private Transform objectBeingDragged;
 	private Quaternion objectBeingDraggedOriginalRotation;
 
+	private Camera camera;
+
 	public override void OnStartLocalPlayer(){
 
-		Camera.main.GetComponent<MouseOrbit>().SetTarget(gameObject.transform);
+		if (isLocalPlayer){
+			camera = Camera.main;
+			camera.transform.position = transform.position;
+			camera.transform.parent = transform;
+            Camera.main.GetComponent<MouseOrbit>().SetTarget(gameObject.transform);
+		}
 	}
 
 	void Start(){
@@ -132,6 +139,8 @@ public class PlayerMove : NetworkBehaviour {
 		);
 
 		chip.layer = 8;
+
+		NetworkServer.Spawn(chip);
 	}
 
 	[Command]
@@ -145,5 +154,7 @@ public class PlayerMove : NetworkBehaviour {
 		);
 
 		tile.layer = 8;
+
+		NetworkServer.Spawn(tile);
 	}
 }
