@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4697995332195810, guid: ad7af326a9b284a3186f3d133e2e116a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4697995332195810, guid: ad7af326a9b284a3186f3d133e2e116a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -154,8 +154,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4697995332195810, guid: ad7af326a9b284a3186f3d133e2e116a, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 65274819893594850, guid: ad7af326a9b284a3186f3d133e2e116a,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 3b3607b14442543659de681edebacc4f,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad7af326a9b284a3186f3d133e2e116a, type: 2}
   m_IsPrefabParent: 0
@@ -276,7 +282,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1876195355277892, guid: bea4eece8a2b5461cbba528361550668,
+  m_PlayerPrefab: {fileID: 1563991388054262, guid: bea4eece8a2b5461cbba528361550668,
     type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
@@ -284,6 +290,7 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 1116304644050876, guid: 43a31313f7c884ffa92d927cb5c7a634, type: 2}
+  - {fileID: 1044575520182916, guid: 608363e8c390c44f88ef461a6319ebe2, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:

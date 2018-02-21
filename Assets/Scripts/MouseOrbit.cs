@@ -25,7 +25,7 @@ public class MouseOrbit : MonoBehaviour
 
 		if(target != null){
 
-			transform.position = target.position + new Vector3(0, 0, depth);
+			transform.position = target.position + new Vector3(0, 0, 0);
 
 			var x = Input.GetAxis("Horizontal");
 			var y = Input.GetAxis("Vertical");
