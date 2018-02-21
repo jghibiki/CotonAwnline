@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chipPrefab: {fileID: 1116304644050876, guid: 43a31313f7c884ffa92d927cb5c7a634, type: 2}
-  tilePrefab: {fileID: 1044575520182916, guid: 608363e8c390c44f88ef461a6319ebe2, type: 2}
+  tilePrefab: {fileID: 1437280541656742, guid: 608363e8c390c44f88ef461a6319ebe2, type: 2}
 --- !u!114 &114707449836880334
 MonoBehaviour:
   m_ObjectHideFlags: 1

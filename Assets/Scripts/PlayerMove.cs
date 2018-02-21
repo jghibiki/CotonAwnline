@@ -106,6 +106,7 @@ public class PlayerMove : NetworkBehaviour {
 		}
 
 		if(Input.GetButtonUp("Fire1")){
+			objectBeingDragged.GetComponent<HexTile>().ignore_collisions = false;
 			objectBeingDragged = null;
 		}
 
