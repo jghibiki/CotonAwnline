@@ -8,7 +8,14 @@ public class HexCell : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		if(transform.position.z % 2 == 0){
+			var new_pos = transform.position;
+			new_pos.x -= 0.5f;
+			transform.position = new_pos;
+		}
 		
+		gameObject.layer = 9; //adds hex cell to layer 9
 	}
 	
 	// Update is called once per frame
