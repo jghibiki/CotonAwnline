@@ -106,7 +106,16 @@ public class PlayerMove : NetworkBehaviour {
 		}
 
 		if(Input.GetButtonUp("Fire1")){
-			objectBeingDragged.GetComponent<HexTile>().ignore_collisions = false;
+			
+			RaycastHit hit;
+			var layerMask = 1 << 9; //check if we hit a hex cell
+			if(Physics.Raycast(objectBeingDragged.position, -Vector3.up, out hit, Mathf.Infinity, layerMask)){
+				
+				Vector3 new_pos = new Vector3( hit.transform.position.x, 0f, hit.transform.position.z);
+				objectBeingDragged.position = new_pos;
+				objectBeingDragged.rotation = Quaternion.Euler(-90, 0, 0);
+
+			}
 			objectBeingDragged = null;
 		}
 
