@@ -81,7 +81,6 @@ public class MouseOrbit : MonoBehaviour
 
             var newPos = target.transform.position;
 			newPos.y = Mathf.Clamp(newPos.y, 0.0f, 200f);
-			Debug.Log(newPos);
 			target.transform.position = newPos;
 
 		}

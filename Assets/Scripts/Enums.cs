@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enums {
-	public enum TyleType {
-		lumber,
-		wool,
+	public enum TileType {
+		wood,
+		sheep,
 		wheat,
+		metal,
 		brick,
-		ore
+		sea,
+		none
 	};
 
-	public enum GameState {
+	public enum GameMode {
 		setup
 	}
 

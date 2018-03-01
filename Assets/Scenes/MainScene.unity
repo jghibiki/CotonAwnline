@@ -219,6 +219,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caffa47fca6f8074daaf6129d0fc679f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected_tile_type: 6
+  button_highlight_color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!1 &187261722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 187261724}
+  - component: {fileID: 187261723}
+  - component: {fileID: 187261725}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &187261723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187261722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!4 &187261724
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187261722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.0774474, y: -1.1098347, z: 2.564183}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187261725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187261722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbbb55dfcfb844439c807094b82d4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_game_mode: 0
 --- !u!1001 &275402359
 Prefab:
   m_ObjectHideFlags: 0
@@ -288,7 +364,7 @@ GameObject:
   - component: {fileID: 277578948}
   - component: {fileID: 277578947}
   m_Layer: 5
-  m_Name: Wood
+  m_Name: WoodButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -966,7 +1042,7 @@ GameObject:
   - component: {fileID: 888147219}
   - component: {fileID: 888147218}
   m_Layer: 5
-  m_Name: Rock
+  m_Name: MetalButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,7 +1274,7 @@ GameObject:
   - component: {fileID: 1025862271}
   - component: {fileID: 1025862270}
   m_Layer: 5
-  m_Name: Brick
+  m_Name: BrickButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,7 +1385,7 @@ GameObject:
   - component: {fileID: 1071272411}
   - component: {fileID: 1071272410}
   m_Layer: 5
-  m_Name: Wheat
+  m_Name: WheatButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1515,9 +1591,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Rock
-
-'
+  m_Text: Metal
 --- !u!222 &1506399075
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1575,7 +1649,7 @@ GameObject:
   - component: {fileID: 1666287596}
   - component: {fileID: 1666287595}
   m_Layer: 5
-  m_Name: Sheep
+  m_Name: SheepButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,7 +1899,7 @@ GameObject:
   - component: {fileID: 2060277436}
   - component: {fileID: 2060277435}
   m_Layer: 5
-  m_Name: Sea
+  m_Name: SeaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
