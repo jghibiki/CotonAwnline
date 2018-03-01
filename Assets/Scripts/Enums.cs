@@ -20,4 +20,17 @@ public class Enums {
 		create_tile,
 		create_number_token
 	}
+
+	public enum NumberToken {
+		two,
+		three,
+		four,
+		five,
+		six,
+		eight,
+		nine,
+		ten,
+		eleven,
+		twelve
+	}
 }

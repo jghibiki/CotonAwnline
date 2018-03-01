@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -574,7 +574,16 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 1116304644050876, guid: 43a31313f7c884ffa92d927cb5c7a634, type: 2}
-  - {fileID: 0}
+  - {fileID: 1229168462279638, guid: bafad2e6c284f446d832b3ca25375f85, type: 2}
+  - {fileID: 1605005250149146, guid: 39b301a97fc2a408784a7c8e6815f349, type: 2}
+  - {fileID: 1435490014162932, guid: d454b25a0b39e477d9c5fdf6329d3374, type: 2}
+  - {fileID: 1328928953256012, guid: d03353f481f8945578561e31b08ba1c8, type: 2}
+  - {fileID: 1325364142220044, guid: ad19c106481a3419da3237a0945173b7, type: 2}
+  - {fileID: 1861159384312816, guid: 0a878ef7f56164d299924b16ceddee8c, type: 2}
+  - {fileID: 1959167966927330, guid: 3f67aa38dd5c24d8aa8708303440d1f4, type: 2}
+  - {fileID: 1970599578819196, guid: 463a4d2f141664a64b50e84cb0fa679c, type: 2}
+  - {fileID: 1972242341157290, guid: da30d17f803ed493e8a6230917bc1eb6, type: 2}
+  - {fileID: 1174738818831788, guid: 2f21663486ce249b7a5e203666b24d03, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -994,7 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1226,7 +1235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1337,7 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1603,7 +1612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1853,7 +1862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

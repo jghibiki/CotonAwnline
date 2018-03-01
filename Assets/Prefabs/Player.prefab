@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4213271428347778}
   - component: {fileID: 114707449836880334}
   - component: {fileID: 114519596646201162}
+  - component: {fileID: 114002181636677582}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -41,6 +42,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114002181636677582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1172350039564090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91af2ccbcbde94bce80a9a601552bb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipPrefab: {fileID: 1116304644050876, guid: 43a31313f7c884ffa92d927cb5c7a634, type: 2}
+  tilePrefab: {fileID: 1437280541656742, guid: 608363e8c390c44f88ef461a6319ebe2, type: 2}
+  diePrefab: {fileID: 1850183181430784, guid: 83b25b835a99541a392be5dc033cf469, type: 2}
+  grabHeight: 0.5
 --- !u!114 &114519596646201162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,8 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005360126e091420ab1f5442e292531b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chipPrefab: {fileID: 1116304644050876, guid: 43a31313f7c884ffa92d927cb5c7a634, type: 2}
-  tilePrefab: {fileID: 1437280541656742, guid: 608363e8c390c44f88ef461a6319ebe2, type: 2}
 --- !u!114 &114707449836880334
 MonoBehaviour:
   m_ObjectHideFlags: 1
