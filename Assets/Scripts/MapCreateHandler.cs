@@ -8,7 +8,7 @@ public class MapCreateHandler : MonoBehaviour {
 
 	public Enums.TileType selected_tile_type = Enums.TileType.none;
 
-	public Color button_highlight_color = Color.red;
+	public Color button_highlight_color = Color.gray;
 
 	private Dictionary<Enums.TileType, string> button_names = new Dictionary<Enums.TileType, string>(){
 		{ Enums.TileType.brick, "BrickButton" },
@@ -97,6 +97,17 @@ public class MapCreateHandler : MonoBehaviour {
 		button.color = button_highlight_color;
 
 		selected_tile_type = tile_type;
+
+	}
+
+	public void ClearSelected(){
+		foreach(var name in button_names.Values){
+
+			var btn = GameObject.Find(name).GetComponent<Image>();
+			btn.color = Color.white;
+		}
+
+		selected_tile_type = Enums.TileType.none;
 
 	}
 }

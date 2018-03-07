@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.EventSystems;
+
 
 public class PlayerInteract : NetworkBehaviour {
 
 	public GameObject chipPrefab;
 	public GameObject tilePrefab;
 	public GameObject diePrefab;
+
+	public GameObject mountainsTilePrefab;
+	public GameObject brickTilePrefab;
+	public GameObject sheepTilePrefab;
+	public GameObject wheatTilePrefab;
+	public GameObject woodTilePrefab;
+	public GameObject seaTilePrefab;
 
 	public float grabHeight = 0.5f;
 
@@ -57,22 +66,30 @@ public class PlayerInteract : NetworkBehaviour {
 			}
 		}
 
-		// Create Tile Interaction Mode.
-		else if(player_interaction_mode == Enums.PlayerInteractionMode.create_tile){
-			// TODO: need somewhere to get the currently selected type of tile from.
 
-			// Creates a tile.
-			if(Input.GetButtonUp("Fire1")){
-				RaycastHit hit;
+		// Creates a tile.
+		if(Input.GetButtonUp("Fire1")){
+			RaycastHit hit;
 
-				Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
-				
-				if(Physics.Raycast(ray, out hit, 100f)){
-					CmdCreateTile(hit.point);
+			var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+
+				Debug.Log(EventSystem.current.IsPointerOverGameObject(-1));
+
+				if (!EventSystem.current.IsPointerOverGameObject(-1)){
+
+					MapCreateHandler handler = GameObject.Find("MapCreationUI").GetComponent<MapCreateHandler>();
+					if (handler != null) {
+
+						CmdCreateTile(hit.point, handler.selected_tile_type);
+						handler.ClearSelected();
+
+					}
 				}
 			}
-
 		}
+
 	}
 
 
@@ -206,11 +223,35 @@ public class PlayerInteract : NetworkBehaviour {
 	}
 
 	[Command]
-	void CmdCreateTile(Vector3 position){
+	void CmdCreateTile(Vector3 position, Enums.TileType tileType){
 		Quaternion rotation = Quaternion.identity * Quaternion.Euler(90, 0, 0);
 
+		GameObject prefab;
+
+		if(tileType == Enums.TileType.metal){
+			prefab = mountainsTilePrefab;
+		}
+		else if(tileType == Enums.TileType.brick){
+			prefab = brickTilePrefab;
+		}
+		else if(tileType == Enums.TileType.sheep){
+			prefab = sheepTilePrefab;
+		}
+		else if(tileType == Enums.TileType.wheat){
+			prefab = wheatTilePrefab;
+		}
+		else if(tileType == Enums.TileType.wood){
+			prefab = woodTilePrefab;
+		}
+		else if(tileType == Enums.TileType.sea){
+			prefab = seaTilePrefab;
+		}
+		else{
+			return;
+		}
+
 		var tile = (GameObject)Instantiate(
-			tilePrefab,
+			prefab,
 			position - transform.forward,
 			rotation
 		);
