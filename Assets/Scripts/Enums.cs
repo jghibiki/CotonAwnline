@@ -24,6 +24,7 @@ public class Enums {
 	}
 
 	public enum NumberToken {
+		none,
 		two,
 		three,
 		four,

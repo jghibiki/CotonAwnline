@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MapCreateHandler : MonoBehaviour {
 
 	public Enums.TileType selected_tile_type = Enums.TileType.none;
+	public Enums.NumberToken selected_token_type = Enums.NumberToken.none;
 
 	public Color button_highlight_color = Color.gray;
 
@@ -49,6 +50,10 @@ public class MapCreateHandler : MonoBehaviour {
 		button_name = button_names[Enums.TileType.sea];
 		btn = GameObject.Find(button_name).GetComponent<Button>();
 		btn.onClick.AddListener(OnClickTileSea);
+
+		// Number Token Button
+		btn = GameObject.Find("NumbersButton").GetComponent<Button>();
+		btn.onClick.AddListener(OnClickNumberTokenButton);
 		
 	}
 	
@@ -82,15 +87,56 @@ public class MapCreateHandler : MonoBehaviour {
 		OnClickTileButton(Enums.TileType.sea);
 	}
 
+	public void OnClickNumberTokenButton(){
+
+		// highlight button
+
+		this.ClearSelected();
+
+		var btn = GameObject.Find("NumbersButton").GetComponent<Image>();
+		btn.color = button_highlight_color;
+
+		var number_dropdown = GameObject.Find("NumbersDropdown").GetComponent<Dropdown>();
+
+		if(number_dropdown.value == 0){
+			selected_token_type = Enums.NumberToken.two;
+		}
+		else if(number_dropdown.value == 1){
+			selected_token_type = Enums.NumberToken.three;
+		}
+		else if(number_dropdown.value == 2){
+			selected_token_type = Enums.NumberToken.four;
+		}
+		else if(number_dropdown.value == 3){
+			selected_token_type = Enums.NumberToken.five;
+		}
+		else if(number_dropdown.value == 4){
+			selected_token_type = Enums.NumberToken.six;
+		}
+		else if(number_dropdown.value == 5){
+			selected_token_type = Enums.NumberToken.eight;
+		}
+		else if(number_dropdown.value == 6){
+			selected_token_type = Enums.NumberToken.nine;
+		}
+		else if(number_dropdown.value == 7){
+			selected_token_type = Enums.NumberToken.ten;
+		}
+		else if(number_dropdown.value == 8){
+			selected_token_type = Enums.NumberToken.eleven;
+		}
+		else if(number_dropdown.value == 9){
+			selected_token_type = Enums.NumberToken.twelve;
+		}
+
+		var player_interact = GameObject.FindWithTag("Player").GetComponent<PlayerInteract>();
+		player_interact.player_interaction_mode = Enums.PlayerInteractionMode.create_number_token;
+
+	}
 
 	void OnClickTileButton(Enums.TileType tile_type){
 
-
-		foreach(var name in button_names.Values){
-
-			var btn = GameObject.Find(name).GetComponent<Image>();
-			btn.color = Color.white;
-		}
+		this.ClearSelected();
 
 		var button_name = button_names[tile_type];
 		var button = GameObject.Find(button_name).GetComponent<Image>();
@@ -98,16 +144,27 @@ public class MapCreateHandler : MonoBehaviour {
 
 		selected_tile_type = tile_type;
 
+		// set player interaction mode
+		var player_interact = GameObject.FindWithTag("Player").GetComponent<PlayerInteract>();
+		player_interact.player_interaction_mode = Enums.PlayerInteractionMode.create_tile;
+
 	}
 
 	public void ClearSelected(){
-		foreach(var name in button_names.Values){
 
+        var num_btn = GameObject.Find("NumbersButton").GetComponent<Image>();
+        num_btn.color = Color.white;
+
+		foreach(var name in button_names.Values){
 			var btn = GameObject.Find(name).GetComponent<Image>();
 			btn.color = Color.white;
 		}
 
 		selected_tile_type = Enums.TileType.none;
+
+		// set player interaction mode
+		var player_interact = GameObject.FindWithTag("Player").GetComponent<PlayerInteract>();
+		player_interact.player_interaction_mode = Enums.PlayerInteractionMode.normal;
 
 	}
 }

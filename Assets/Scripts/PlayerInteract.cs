@@ -18,6 +18,17 @@ public class PlayerInteract : NetworkBehaviour {
 	public GameObject woodTilePrefab;
 	public GameObject seaTilePrefab;
 
+	public GameObject numberTwoToken;
+	public GameObject numberThreeToken;
+	public GameObject numberFourToken;
+	public GameObject numberFiveToken;
+	public GameObject numberSixToken;
+	public GameObject numberEightToken;
+	public GameObject numberNineToken;
+	public GameObject numberTenToken;
+	public GameObject numberElevenToken;
+	public GameObject numberTwelveToken;
+
 	public float grabHeight = 0.5f;
 
 	private Transform objectBeingDragged;
@@ -27,7 +38,7 @@ public class PlayerInteract : NetworkBehaviour {
 	private Vector3 intermediate_object_pos;
 	private float cumulative_distance;
 
-	private  Enums.PlayerInteractionMode player_interaction_mode = Enums.PlayerInteractionMode.normal;
+	public Enums.PlayerInteractionMode player_interaction_mode = Enums.PlayerInteractionMode.normal;
 
 
 	// Use this for initialization
@@ -50,12 +61,6 @@ public class PlayerInteract : NetworkBehaviour {
 
 	void HandleSetupInteractions(GameManagerController game_manager){
 
-		// Normal Interaction mode.
-		if(player_interaction_mode == Enums.PlayerInteractionMode.normal){
-
-			HandleDragAndDrop(game_manager.current_game_mode);
-		}
-
 		if(Input.GetKeyUp("i")){
 			RaycastHit hit;
 
@@ -66,25 +71,56 @@ public class PlayerInteract : NetworkBehaviour {
 			}
 		}
 
+		// Normal Interaction mode.
+		if(player_interaction_mode == Enums.PlayerInteractionMode.normal){
 
-		// Creates a tile.
-		if(Input.GetButtonUp("Fire1")){
-			RaycastHit hit;
+			HandleDragAndDrop(game_manager.current_game_mode);
+		}
 
-			var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			
-			if(Physics.Raycast(ray, out hit, 100f)){
+		if(player_interaction_mode == Enums.PlayerInteractionMode.create_tile){
+			// Creates a tile.
+			if(Input.GetButtonUp("Fire1")){
+				RaycastHit hit;
 
-				Debug.Log(EventSystem.current.IsPointerOverGameObject(-1));
+				var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				
+				if(Physics.Raycast(ray, out hit, 100f)){
 
-				if (!EventSystem.current.IsPointerOverGameObject(-1)){
+					Debug.Log(EventSystem.current.IsPointerOverGameObject(-1));
 
-					MapCreateHandler handler = GameObject.Find("MapCreationUI").GetComponent<MapCreateHandler>();
-					if (handler != null) {
+					if (!EventSystem.current.IsPointerOverGameObject(-1)){
 
-						CmdCreateTile(hit.point, handler.selected_tile_type);
-						handler.ClearSelected();
+						MapCreateHandler handler = GameObject.Find("MapCreationUI").GetComponent<MapCreateHandler>();
+						if (handler != null) {
 
+							CmdCreateTile(hit.point, handler.selected_tile_type);
+							handler.ClearSelected();
+
+						}
+					}
+				}
+			}
+		}
+
+		if(player_interaction_mode == Enums.PlayerInteractionMode.create_number_token){
+			// Creates a number token.
+			if(Input.GetButtonUp("Fire1")){
+				RaycastHit hit;
+
+				var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				
+				if(Physics.Raycast(ray, out hit, 100f)){
+
+					Debug.Log(EventSystem.current.IsPointerOverGameObject(-1));
+
+					if (!EventSystem.current.IsPointerOverGameObject(-1)){
+
+						MapCreateHandler handler = GameObject.Find("MapCreationUI").GetComponent<MapCreateHandler>();
+						if (handler != null) {
+
+							CmdCreateNumberToken(hit.point, handler.selected_token_type);
+							handler.ClearSelected();
+						}
 					}
 				}
 			}
@@ -259,6 +295,57 @@ public class PlayerInteract : NetworkBehaviour {
 		tile.layer = 8;
 
 		NetworkServer.Spawn(tile);
+	}
+
+	[Command]
+	void CmdCreateNumberToken(Vector3 position, Enums.NumberToken token_type){
+		Quaternion rotation = Quaternion.identity * Quaternion.Euler(-90, 0, 0);
+
+		GameObject prefab;
+
+		if(token_type == Enums.NumberToken.two){
+			prefab = numberTwoToken;
+		}
+		else if(token_type == Enums.NumberToken.three){
+			prefab = numberThreeToken;
+		}
+		else if(token_type == Enums.NumberToken.four){
+			prefab = numberFourToken;
+		}
+		else if(token_type == Enums.NumberToken.five){
+			prefab = numberFiveToken;
+		}
+		else if(token_type == Enums.NumberToken.six){
+			prefab = numberSixToken;
+		}
+		else if(token_type == Enums.NumberToken.eight){
+			prefab = numberEightToken;
+		}
+		else if(token_type == Enums.NumberToken.nine){
+			prefab = numberNineToken;
+		}
+		else if(token_type == Enums.NumberToken.ten){
+			prefab = numberTenToken;
+		}
+		else if(token_type == Enums.NumberToken.eleven){
+			prefab = numberElevenToken;
+		}
+		else if(token_type == Enums.NumberToken.twelve){
+			prefab = numberTwelveToken;
+		}
+		else{
+			return;
+		}
+
+		var token = (GameObject)Instantiate(
+			prefab,
+			position - transform.forward,
+			rotation
+		);
+
+		token.layer = 8;
+
+		NetworkServer.Spawn(token);
 	}
 
 	[Command]

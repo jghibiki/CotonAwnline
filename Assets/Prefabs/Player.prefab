@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114002181636677582}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,28 @@ MonoBehaviour:
     type: 2}
   seaTilePrefab: {fileID: 1110214771948776, guid: d4067a2054b2443ae88160cf0a1201d6,
     type: 2}
+  numberTwoToken: {fileID: 1229168462279638, guid: bafad2e6c284f446d832b3ca25375f85,
+    type: 2}
+  numberThreeToken: {fileID: 1605005250149146, guid: 39b301a97fc2a408784a7c8e6815f349,
+    type: 2}
+  numberFourToken: {fileID: 1435490014162932, guid: d454b25a0b39e477d9c5fdf6329d3374,
+    type: 2}
+  numberFiveToken: {fileID: 1328928953256012, guid: d03353f481f8945578561e31b08ba1c8,
+    type: 2}
+  numberSixToken: {fileID: 1325364142220044, guid: ad19c106481a3419da3237a0945173b7,
+    type: 2}
+  numberEightToken: {fileID: 1861159384312816, guid: 0a878ef7f56164d299924b16ceddee8c,
+    type: 2}
+  numberNineToken: {fileID: 1959167966927330, guid: 3f67aa38dd5c24d8aa8708303440d1f4,
+    type: 2}
+  numberTenToken: {fileID: 1970599578819196, guid: 463a4d2f141664a64b50e84cb0fa679c,
+    type: 2}
+  numberElevenToken: {fileID: 1972242341157290, guid: da30d17f803ed493e8a6230917bc1eb6,
+    type: 2}
+  numberTwelveToken: {fileID: 1174738818831788, guid: 2f21663486ce249b7a5e203666b24d03,
+    type: 2}
   grabHeight: 0.5
+  player_interaction_mode: 0
 --- !u!114 &114519596646201162
 MonoBehaviour:
   m_ObjectHideFlags: 1

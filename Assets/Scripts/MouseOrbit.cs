@@ -36,12 +36,14 @@ public class MouseOrbit : MonoBehaviour
 
 			target.transform.Translate(moveVector);
 
+			/* 
 			if(Input.GetAxis("Mouse ScrollWheel") > 0 && GetComponent<Camera>().fieldOfView > 10){
 				GetComponent<Camera>().fieldOfView --;
 			}
 			if(Input.GetAxis("Mouse ScrollWheel") < 0 && GetComponent<Camera>().fieldOfView < 100){
 				GetComponent<Camera>().fieldOfView ++;
 			}
+			*/
 
 			if (Input.GetMouseButton(1))
 			{
