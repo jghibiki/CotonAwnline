@@ -31,7 +31,8 @@ public class PlayerMove : NetworkBehaviour {
 
 
 		// Handle Upward movement
-		if(Input.GetKey(KeyCode.R)){
+		//if(Input.GetKey(KeyCode.R)){
+		if(Input.GetAxis("Mouse ScrollWheel") > 0){
 			
 			Vector3 moveVector = (transform.forward * speed) + (transform.right * speed);
 			moveVector.y += speed * Time.deltaTime; 
@@ -45,7 +46,8 @@ public class PlayerMove : NetworkBehaviour {
 		}
 
 		// Handle Downward movement
-		if(Input.GetKey(KeyCode.F)){
+		//if(Input.GetKey(KeyCode.F)){
+		if(Input.GetAxis("Mouse ScrollWheel") < 0){
 			
 			Vector3 moveVector = (transform.forward * speed) + (transform.right * speed);
 			moveVector.y -= speed * Time.deltaTime; 

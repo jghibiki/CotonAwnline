@@ -29,6 +29,9 @@ public class PlayerInteract : NetworkBehaviour {
 	public GameObject numberElevenToken;
 	public GameObject numberTwelveToken;
 
+
+	public GameObject referenceCardPrefab;
+
 	public float grabHeight = 0.5f;
 
 	private Transform objectBeingDragged;
@@ -70,6 +73,17 @@ public class PlayerInteract : NetworkBehaviour {
 				CmdCreateDie(hit.point);
 			}
 		}
+
+		if(Input.GetKeyUp("o")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateCard(hit.point, Enums.CardTypes.reference_card);
+			}
+		}
+		
 
 		// Normal Interaction mode.
 		if(player_interaction_mode == Enums.PlayerInteractionMode.normal){
@@ -204,6 +218,18 @@ public class PlayerInteract : NetworkBehaviour {
 
 					}
 				}
+				else if(objectBeingDragged.GetComponent<NumberToken>()){
+					RaycastHit hit;
+					var layerMask = 1 << 9; //check if we hit a hex cell
+					if(Physics.Raycast(objectBeingDragged.position, -Vector3.up, out hit, Mathf.Infinity, layerMask)){
+						
+						Vector3 new_pos = new Vector3( hit.transform.position.x, 0f, hit.transform.position.z);
+						objectBeingDragged.position = new_pos;
+						objectBeingDragged.rotation = Quaternion.Euler(-90, 0, 0);
+
+					}
+					
+				}
 			}
 
 			objectBeingDragged = null;
@@ -230,15 +256,29 @@ public class PlayerInteract : NetworkBehaviour {
 						objectBeingDragged.position += new Vector3(0, grabHeight*3, 0);
 					}
 					else{
-					objectBeingDragged.position += new Vector3(0, grabHeight, 0);
+						objectBeingDragged.position += new Vector3(0, grabHeight, 0);
 					}
-					objectBeingDragged.rotation = objectBeingDraggedOriginalRotation; 
+					//objectBeingDragged.rotation = objectBeingDraggedOriginalRotation; 
 
 				}
 				else{ // resets rotation to prevent crazy rotation from gravity
 					objectBeingDragged.position += new Vector3(0, 0, 0);				
-					objectBeingDragged.rotation = objectBeingDraggedOriginalRotation; 
+					//objectBeingDragged.rotation = objectBeingDraggedOriginalRotation; 
 				}
+
+
+				if(Input.GetKey("q")){
+					objectBeingDragged.transform.Rotate(Vector3.forward* Time.deltaTime * 75);
+				}
+				else if(Input.GetKey("e")){
+					objectBeingDragged.transform.Rotate(-Vector3.forward* Time.deltaTime * 75);
+				}
+
+				if(Input.GetKeyUp("f")){
+					var rotation = objectBeingDragged.rotation;
+					objectBeingDragged.rotation = Quaternion.Euler(rotation.eulerAngles.x+180, rotation.eulerAngles.y, rotation.eulerAngles.z);
+				}
+
 			}
 		}
 
@@ -359,5 +399,28 @@ public class PlayerInteract : NetworkBehaviour {
 		die.layer = 8;
 
 		NetworkServer.Spawn(die);
+	}
+
+	[Command]
+	void CmdCreateCard(Vector3 position, Enums.CardTypes card_type){
+		GameObject prefab;
+
+		if(card_type == Enums.CardTypes.reference_card){
+			prefab = referenceCardPrefab;
+		}
+		else{
+			return;
+		}
+
+		Quaternion rotation = Quaternion.identity * Quaternion.Euler(-90, 0, 0);
+		var card = (GameObject)Instantiate(
+			prefab,
+			position - transform.forward,
+			rotation
+		);
+
+		card.layer = 8;
+
+		NetworkServer.Spawn(card);
 	}
 }

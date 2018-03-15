@@ -88,6 +88,8 @@ MonoBehaviour:
     type: 2}
   numberTwelveToken: {fileID: 1174738818831788, guid: 2f21663486ce249b7a5e203666b24d03,
     type: 2}
+  referenceCardPrefab: {fileID: 1190310268516650, guid: 1adef1a7650f646a0a5d98c85c8b19c9,
+    type: 2}
   grabHeight: 0.5
   player_interaction_mode: 0
 --- !u!114 &114519596646201162

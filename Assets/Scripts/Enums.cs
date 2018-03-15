@@ -13,6 +13,17 @@ public class Enums {
 		none
 	};
 
+	public enum CardTypes{
+		wood,
+		sheep,
+		wheat,
+		metal,
+		brick,
+		sea,
+		none,
+		reference_card
+	}
+
 	public enum GameMode {
 		setup
 	}
