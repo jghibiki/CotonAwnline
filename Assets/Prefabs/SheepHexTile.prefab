@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 54896367004284684}
   - component: {fileID: 64431888224941814}
   - component: {fileID: 114424338834918336}
+  - component: {fileID: 114588432868709808}
   m_Layer: 0
   m_Name: SheepHexTile
   m_TagString: Untagged
@@ -167,6 +168,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile_type: 6
+--- !u!114 &114588432868709808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442771492435030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114621395871670112
 MonoBehaviour:
   m_ObjectHideFlags: 1

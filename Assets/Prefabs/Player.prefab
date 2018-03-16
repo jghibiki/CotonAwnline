@@ -53,8 +53,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91af2ccbcbde94bce80a9a601552bb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chipPrefab: {fileID: 1116304644050876, guid: 43a31313f7c884ffa92d927cb5c7a634, type: 2}
-  tilePrefab: {fileID: 1437280541656742, guid: 608363e8c390c44f88ef461a6319ebe2, type: 2}
   diePrefab: {fileID: 1850183181430784, guid: 83b25b835a99541a392be5dc033cf469, type: 2}
   mountainsTilePrefab: {fileID: 1816561637665504, guid: 8037950a4a3884af8a4b32deaf403c8e,
     type: 2}
@@ -90,7 +88,13 @@ MonoBehaviour:
     type: 2}
   referenceCardPrefab: {fileID: 1190310268516650, guid: 1adef1a7650f646a0a5d98c85c8b19c9,
     type: 2}
-  grabHeight: 0.5
+  brickCardPrefab: {fileID: 1327580412400832, guid: 2444c3ce94e3d43f486ae04ccb6ad1c3,
+    type: 2}
+  woodCardPrefab: {fileID: 1198095297239460, guid: 30e7a9092fc854428901a8439fb13419,
+    type: 2}
+  oreCardPrefab: {fileID: 1039422028924910, guid: 6d828413c57b04d6285976c5b5c07cd0,
+    type: 2}
+  grabHeight: 1.5
   player_interaction_mode: 0
 --- !u!114 &114519596646201162
 MonoBehaviour:

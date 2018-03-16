@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 54449264426661788}
   - component: {fileID: 64710175610664374}
   - component: {fileID: 114738723226628354}
+  - component: {fileID: 114120476422671880}
   m_Layer: 0
   m_Name: SeaHexagonTile
   m_TagString: Untagged
@@ -166,6 +167,17 @@ MonoBehaviour:
     i15: 214
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!114 &114120476422671880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1110214771948776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114140494237375378
 MonoBehaviour:
   m_ObjectHideFlags: 1

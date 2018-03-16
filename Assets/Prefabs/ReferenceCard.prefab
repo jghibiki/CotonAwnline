@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114804377915902534}
   - component: {fileID: 54177397376881706}
   - component: {fileID: 64602961491985050}
+  - component: {fileID: 114789323535376726}
   m_Layer: 8
   m_Name: ReferenceCard
   m_TagString: Untagged
@@ -96,7 +97,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 7.42
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -165,6 +166,17 @@ MonoBehaviour:
     i15: 201
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!114 &114789323535376726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190310268516650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114804377915902534
 MonoBehaviour:
   m_ObjectHideFlags: 1

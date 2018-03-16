@@ -7,10 +7,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerInteract : NetworkBehaviour {
 
-	public GameObject chipPrefab;
-	public GameObject tilePrefab;
 	public GameObject diePrefab;
 
+	//Tiles
 	public GameObject mountainsTilePrefab;
 	public GameObject brickTilePrefab;
 	public GameObject sheepTilePrefab;
@@ -18,6 +17,7 @@ public class PlayerInteract : NetworkBehaviour {
 	public GameObject woodTilePrefab;
 	public GameObject seaTilePrefab;
 
+	//Tokens
 	public GameObject numberTwoToken;
 	public GameObject numberThreeToken;
 	public GameObject numberFourToken;
@@ -30,7 +30,11 @@ public class PlayerInteract : NetworkBehaviour {
 	public GameObject numberTwelveToken;
 
 
+	//Cards
 	public GameObject referenceCardPrefab;
+	public GameObject brickCardPrefab;
+	public GameObject woodCardPrefab;
+	public GameObject oreCardPrefab;
 
 	public float grabHeight = 0.5f;
 
@@ -81,6 +85,36 @@ public class PlayerInteract : NetworkBehaviour {
 			
 			if(Physics.Raycast(ray, out hit, 100f)){
 				CmdCreateCard(hit.point, Enums.CardTypes.reference_card);
+			}
+		}
+
+		if(Input.GetKeyUp("1")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateCard(hit.point, Enums.CardTypes.brick);
+			}
+		}
+
+		if(Input.GetKeyUp("2")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateCard(hit.point, Enums.CardTypes.wood);
+			}
+		}
+
+		if(Input.GetKeyUp("3")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateCard(hit.point, Enums.CardTypes.metal);
 			}
 		}
 		
@@ -157,7 +191,7 @@ public class PlayerInteract : NetworkBehaviour {
 				objectBeingDragged = hit.transform ;				
 
 				if(objectBeingDragged.GetComponent<Die>()){
-					objectBeingDragged.position += new Vector3(0, grabHeight*3, 0);
+					objectBeingDragged.position += new Vector3(0, grabHeight, 0);
 				}
 				else{
 					objectBeingDragged.position += new Vector3(0, grabHeight, 0);
@@ -197,12 +231,6 @@ public class PlayerInteract : NetworkBehaviour {
 					calculated_force.x *= 2f;
 
 					rigidbody.AddForce(calculated_force, ForceMode.Force);
-
-					Debug.Log("Roll Vigor: " + roll_vigor);
-					Debug.Log("Initial Object Pos: " + initial_object_pos);
-					Debug.Log("Final Object Pos: " + final_object_pos);
-					Debug.Log("Calculated Torque: " + calculated_torque);
-					Debug.Log("Calculated Force: " + calculated_force);
 
 				}
 
@@ -253,7 +281,7 @@ public class PlayerInteract : NetworkBehaviour {
 					objectBeingDragged.position = hit.point;
 
 					if(objectBeingDragged.GetComponent<Die>()){
-						objectBeingDragged.position += new Vector3(0, grabHeight*3, 0);
+						objectBeingDragged.position += new Vector3(0, grabHeight, 0);
 					}
 					else{
 						objectBeingDragged.position += new Vector3(0, grabHeight, 0);
@@ -283,19 +311,6 @@ public class PlayerInteract : NetworkBehaviour {
 		}
 
 
-	}
-
-	[Command]
-	void CmdCreateChip(Vector3 position){
-		var chip = (GameObject)Instantiate(
-			chipPrefab,
-			position - transform.forward,
-			Quaternion.identity
-		);
-
-		chip.layer = 8;
-
-		NetworkServer.Spawn(chip);
 	}
 
 	[Command]
@@ -407,6 +422,15 @@ public class PlayerInteract : NetworkBehaviour {
 
 		if(card_type == Enums.CardTypes.reference_card){
 			prefab = referenceCardPrefab;
+		}
+		else if(card_type == Enums.CardTypes.brick){
+			prefab = brickCardPrefab;
+		}
+		else if(card_type == Enums.CardTypes.wood){
+			prefab = woodCardPrefab;
+		}
+		else if(card_type == Enums.CardTypes.metal){
+			prefab = oreCardPrefab;
 		}
 		else{
 			return;

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 54087597105635218}
   - component: {fileID: 64760192745091582}
   - component: {fileID: 114520718686175834}
+  - component: {fileID: 114164413573104176}
   m_Layer: 0
   m_Name: WheatHexagonTile
   m_TagString: Untagged
@@ -134,6 +135,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114164413573104176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1022603991046420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114402295067820686
 MonoBehaviour:
   m_ObjectHideFlags: 1
