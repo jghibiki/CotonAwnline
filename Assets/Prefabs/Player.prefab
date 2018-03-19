@@ -94,6 +94,10 @@ MonoBehaviour:
     type: 2}
   oreCardPrefab: {fileID: 1039422028924910, guid: 6d828413c57b04d6285976c5b5c07cd0,
     type: 2}
+  sheepCardPrefab: {fileID: 1488125589327028, guid: 9081b35122538418fa2038e064e1d82e,
+    type: 2}
+  wheatCardPrefab: {fileID: 1960451247877458, guid: c575635a42b594a9193142ab83999510,
+    type: 2}
   grabHeight: 1.5
   player_interaction_mode: 0
 --- !u!114 &114519596646201162

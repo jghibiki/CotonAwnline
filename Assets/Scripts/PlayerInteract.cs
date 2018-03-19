@@ -35,6 +35,8 @@ public class PlayerInteract : NetworkBehaviour {
 	public GameObject brickCardPrefab;
 	public GameObject woodCardPrefab;
 	public GameObject oreCardPrefab;
+	public GameObject sheepCardPrefab;
+	public GameObject wheatCardPrefab;
 
 	public float grabHeight = 0.5f;
 
@@ -117,7 +119,26 @@ public class PlayerInteract : NetworkBehaviour {
 				CmdCreateCard(hit.point, Enums.CardTypes.metal);
 			}
 		}
+
+		if(Input.GetKeyUp("4")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateCard(hit.point, Enums.CardTypes.sheep);
+			}
+		}
 		
+		if(Input.GetKeyUp("5")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateCard(hit.point, Enums.CardTypes.wheat);
+			}
+		}
 
 		// Normal Interaction mode.
 		if(player_interaction_mode == Enums.PlayerInteractionMode.normal){
@@ -431,6 +452,12 @@ public class PlayerInteract : NetworkBehaviour {
 		}
 		else if(card_type == Enums.CardTypes.metal){
 			prefab = oreCardPrefab;
+		}
+		else if(card_type == Enums.CardTypes.sheep){
+			prefab = sheepCardPrefab;
+		}
+		else if(card_type == Enums.CardTypes.wheat){
+			prefab = wheatCardPrefab;
 		}
 		else{
 			return;
