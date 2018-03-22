@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 64095301736367978}
   - component: {fileID: 114122042554150528}
   - component: {fileID: 114465790017508396}
+  - component: {fileID: 114919433710258420}
   m_Layer: 0
   m_Name: WoodHexagonTile
   m_TagString: Untagged
@@ -211,3 +212,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114919433710258420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462680361889928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f71e653b203d49e58b901f52c8d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
