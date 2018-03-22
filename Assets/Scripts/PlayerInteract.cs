@@ -162,7 +162,22 @@ public class PlayerInteract : NetworkBehaviour {
 						MapCreateHandler handler = GameObject.Find("MapCreationUI").GetComponent<MapCreateHandler>();
 						if (handler != null) {
 
-							CmdCreateTile(hit.point, handler.selected_tile_type);
+							Vector3 point;
+
+							// see if we can snap tile to grid
+							RaycastHit hit2;
+							var layerMask = 1 << 9; //check if we hit a hex cell
+							var adjusted_point = new Vector3(hit.point.x, hit.point.y+2, hit.point.z);
+
+							if(Physics.Raycast(adjusted_point, -Vector3.up, out hit2, Mathf.Infinity, layerMask)){
+								point = new Vector3( hit2.transform.position.x, hit2.transform.position.y+1, hit2.transform.position.z+1f);
+								Debug.Log(point);
+							}
+							else{
+								point = hit.point;
+							}
+
+							CmdCreateTile(point, handler.selected_tile_type);
 							handler.ClearSelected();
 
 						}
@@ -187,7 +202,26 @@ public class PlayerInteract : NetworkBehaviour {
 						MapCreateHandler handler = GameObject.Find("MapCreationUI").GetComponent<MapCreateHandler>();
 						if (handler != null) {
 
-							CmdCreateNumberToken(hit.point, handler.selected_token_type);
+							Vector3 point;
+
+							// see if we can snap token to grid
+							RaycastHit hit2;
+							var layerMask = 1 << 9; //check if we hit a hex cell
+							var adjusted_point = new Vector3(hit.point.x, hit.point.y+2, hit.point.z);
+
+							if(Physics.Raycast(adjusted_point, -Vector3.up, out hit2, Mathf.Infinity, layerMask)){
+								Debug.Log(hit2.transform.gameObject);
+								point = new Vector3( 
+									hit2.transform.gameObject.transform.position.x, 
+									1.0f, 
+									hit2.transform.gameObject.transform.position.z+1.0f);
+								Debug.Log(point);
+							}
+							else{
+								point = hit.point;
+							}
+
+							CmdCreateNumberToken(point, handler.selected_token_type);
 							handler.ClearSelected();
 						}
 					}
@@ -361,6 +395,7 @@ public class PlayerInteract : NetworkBehaviour {
 		else{
 			return;
 		}
+
 
 		var tile = (GameObject)Instantiate(
 			prefab,
