@@ -38,6 +38,10 @@ public class PlayerInteract : NetworkBehaviour {
 	public GameObject sheepCardPrefab;
 	public GameObject wheatCardPrefab;
 
+	// buildings
+	public GameObject settlementPrefab;
+	public GameObject cityPrefab;
+
 	public float grabHeight = 0.5f;
 
 	private Transform objectBeingDragged;
@@ -46,6 +50,8 @@ public class PlayerInteract : NetworkBehaviour {
 	private Vector3 initial_object_pos;
 	private Vector3 intermediate_object_pos;
 	private float cumulative_distance;
+
+	private bool objects_locked = false;
 
 	public Enums.PlayerInteractionMode player_interaction_mode = Enums.PlayerInteractionMode.normal;
 
@@ -77,6 +83,27 @@ public class PlayerInteract : NetworkBehaviour {
 			
 			if(Physics.Raycast(ray, out hit, 100f)){
 				CmdCreateDie(hit.point);
+			}
+		}
+
+		if(Input.GetKeyUp("l")){
+			var lockable_objects = FindObjectsOfType<LockMovement>() as LockMovement[];
+
+
+			foreach(LockMovement obj in lockable_objects){
+				if(objects_locked){
+					obj.Unlock();
+				}
+				else{
+					obj.Lock();
+				}
+			}
+
+			if(objects_locked){
+				objects_locked = false;
+			}
+			else{
+				objects_locked = true;
 			}
 		}
 
@@ -137,6 +164,26 @@ public class PlayerInteract : NetworkBehaviour {
 			
 			if(Physics.Raycast(ray, out hit, 100f)){
 				CmdCreateCard(hit.point, Enums.CardTypes.wheat);
+			}
+		}
+
+		if(Input.GetKeyUp("6")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateSettlement(hit.point);
+			}
+		}
+
+		if(Input.GetKeyUp("7")){
+			RaycastHit hit;
+
+			Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); 
+			
+			if(Physics.Raycast(ray, out hit, 100f)){
+				CmdCreateCity(hit.point);
 			}
 		}
 
@@ -509,4 +556,33 @@ public class PlayerInteract : NetworkBehaviour {
 
 		NetworkServer.Spawn(card);
 	}
+
+	[Command]
+	void CmdCreateSettlement(Vector3 position){
+		Quaternion rotation = Quaternion.identity * Quaternion.Euler(-90, 0, 0);
+		var obj = (GameObject)Instantiate(
+			settlementPrefab,
+			position - transform.forward,
+			rotation
+		);
+
+		obj.layer = 8;
+
+		NetworkServer.Spawn(obj);
+	}
+
+	[Command]
+	void CmdCreateCity(Vector3 position){
+		Quaternion rotation = Quaternion.identity * Quaternion.Euler(0, 0, 0);
+		var obj = (GameObject)Instantiate(
+			cityPrefab,
+			position - transform.forward,
+			rotation
+		);
+
+		obj.layer = 8;
+
+		NetworkServer.Spawn(obj);
+	}
+
 }

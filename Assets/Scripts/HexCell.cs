@@ -14,9 +14,14 @@ public class HexCell : MonoBehaviour {
 			new_pos.x -= 0.5f;
 			transform.position = new_pos;
 		}
+
+		var new_pos2 = transform.position;
+		new_pos2.z -= transform.position.z * 0.1f;
+		transform.position = new_pos2;
 		
 		gameObject.layer = 9; //adds hex cell to layer 9
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
