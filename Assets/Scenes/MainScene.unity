@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1323,7 +1323,18 @@ MonoBehaviour:
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs:
-  - {fileID: 1116304644050876, guid: 43a31313f7c884ffa92d927cb5c7a634, type: 2}
+  - {fileID: 1039422028924910, guid: 6d828413c57b04d6285976c5b5c07cd0, type: 2}
+  - {fileID: 1327580412400832, guid: 2444c3ce94e3d43f486ae04ccb6ad1c3, type: 2}
+  - {fileID: 1190310268516650, guid: 1adef1a7650f646a0a5d98c85c8b19c9, type: 2}
+  - {fileID: 1488125589327028, guid: 9081b35122538418fa2038e064e1d82e, type: 2}
+  - {fileID: 1960451247877458, guid: c575635a42b594a9193142ab83999510, type: 2}
+  - {fileID: 1198095297239460, guid: 30e7a9092fc854428901a8439fb13419, type: 2}
+  - {fileID: 1462680361889928, guid: 5fea5566812244d8280a6ac6122136a4, type: 2}
+  - {fileID: 1022603991046420, guid: c158e8f382ebd49edadc884524538d7c, type: 2}
+  - {fileID: 1442771492435030, guid: ce56d1fe625f7433393d0e65a5f35b47, type: 2}
+  - {fileID: 1110214771948776, guid: d4067a2054b2443ae88160cf0a1201d6, type: 2}
+  - {fileID: 1816561637665504, guid: 8037950a4a3884af8a4b32deaf403c8e, type: 2}
+  - {fileID: 1705374536756270, guid: c889db67a4b3f471f9a0ffc35869d92f, type: 2}
   - {fileID: 1229168462279638, guid: bafad2e6c284f446d832b3ca25375f85, type: 2}
   - {fileID: 1605005250149146, guid: 39b301a97fc2a408784a7c8e6815f349, type: 2}
   - {fileID: 1435490014162932, guid: d454b25a0b39e477d9c5fdf6329d3374, type: 2}
@@ -1334,13 +1345,8 @@ MonoBehaviour:
   - {fileID: 1970599578819196, guid: 463a4d2f141664a64b50e84cb0fa679c, type: 2}
   - {fileID: 1972242341157290, guid: da30d17f803ed493e8a6230917bc1eb6, type: 2}
   - {fileID: 1174738818831788, guid: 2f21663486ce249b7a5e203666b24d03, type: 2}
-  - {fileID: 1816561637665504, guid: 8037950a4a3884af8a4b32deaf403c8e, type: 2}
-  - {fileID: 1705374536756270, guid: c889db67a4b3f471f9a0ffc35869d92f, type: 2}
-  - {fileID: 1110214771948776, guid: d4067a2054b2443ae88160cf0a1201d6, type: 2}
-  - {fileID: 1022603991046420, guid: c158e8f382ebd49edadc884524538d7c, type: 2}
-  - {fileID: 1462680361889928, guid: 5fea5566812244d8280a6ac6122136a4, type: 2}
-  - {fileID: 1190310268516650, guid: 1adef1a7650f646a0a5d98c85c8b19c9, type: 2}
-  - {fileID: 1327580412400832, guid: 2444c3ce94e3d43f486ae04ccb6ad1c3, type: 2}
+  - {fileID: 1760248154525926, guid: 0ef1a8a426d9f48f2b846f10d080f461, type: 2}
+  - {fileID: 1493869812436114, guid: 161ec84d873cc4cb2af7bae601c1da8d, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -1383,7 +1389,7 @@ MonoBehaviour:
     m_MaxTimerTimeout: 12000
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
-  m_Channels: 0500000000000000
+  m_Channels: 
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1

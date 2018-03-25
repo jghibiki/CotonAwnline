@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class MapCreateHandler : MonoBehaviour {
 
@@ -129,8 +130,17 @@ public class MapCreateHandler : MonoBehaviour {
 			selected_token_type = Enums.NumberToken.twelve;
 		}
 
-		var player_interact = GameObject.FindWithTag("Player").GetComponent<PlayerInteract>();
-		player_interact.player_interaction_mode = Enums.PlayerInteractionMode.create_number_token;
+		// set player interaction mode
+		PlayerInteract player_interact = null;
+		foreach(var obj in GameObject.FindGameObjectsWithTag("Player")){
+			if(obj.GetComponent<NetworkIdentity>().isLocalPlayer){
+				player_interact = obj.GetComponent<PlayerInteract>();
+				break;
+			}
+		}
+		if(player_interact != null){
+			player_interact.player_interaction_mode = Enums.PlayerInteractionMode.create_number_token;
+		}
 
 	}
 
@@ -145,8 +155,16 @@ public class MapCreateHandler : MonoBehaviour {
 		selected_tile_type = tile_type;
 
 		// set player interaction mode
-		var player_interact = GameObject.FindWithTag("Player").GetComponent<PlayerInteract>();
-		player_interact.player_interaction_mode = Enums.PlayerInteractionMode.create_tile;
+		PlayerInteract player_interact = null;
+		foreach(var obj in GameObject.FindGameObjectsWithTag("Player")){
+			if(obj.GetComponent<NetworkIdentity>().isLocalPlayer){
+				player_interact = obj.GetComponent<PlayerInteract>();
+				break;
+			}
+		}
+		if(player_interact != null){
+			player_interact.player_interaction_mode = Enums.PlayerInteractionMode.create_tile;
+		}
 
 	}
 
@@ -163,8 +181,16 @@ public class MapCreateHandler : MonoBehaviour {
 		selected_tile_type = Enums.TileType.none;
 
 		// set player interaction mode
-		var player_interact = GameObject.FindWithTag("Player").GetComponent<PlayerInteract>();
-		player_interact.player_interaction_mode = Enums.PlayerInteractionMode.normal;
+		PlayerInteract player_interact = null;
+		foreach(var obj in GameObject.FindGameObjectsWithTag("Player")){
+			if(obj.GetComponent<NetworkIdentity>().isLocalPlayer){
+				player_interact = obj.GetComponent<PlayerInteract>();
+				break;
+			}
+		}
+		if(player_interact != null){
+			player_interact.player_interaction_mode = Enums.PlayerInteractionMode.normal;
+		}
 
 	}
 }
