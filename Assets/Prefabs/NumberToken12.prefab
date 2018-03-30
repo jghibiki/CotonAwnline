@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23459366945739172}
   - component: {fileID: 95437622871948762}
   - component: {fileID: 114650635397587428}
-  - component: {fileID: 114361643780462438}
   - component: {fileID: 54970366024834146}
   - component: {fileID: 64313714690780904}
   - component: {fileID: 114145669119640320}
   - component: {fileID: 114356535632151466}
   - component: {fileID: 114677078029414108}
-  m_Layer: 0
+  - component: {fileID: 114793495433151588}
+  - component: {fileID: 114428256204317040}
+  m_Layer: 8
   m_Name: NumberToken12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114361643780462438
+--- !u!114 &114428256204317040
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -166,19 +167,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1174738818831788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114650635397587428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,3 +214,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locked: 0
+--- !u!114 &114793495433151588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174738818831788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

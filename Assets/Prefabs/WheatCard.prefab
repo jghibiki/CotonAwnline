@@ -24,10 +24,11 @@ GameObject:
   - component: {fileID: 95564967110791174}
   - component: {fileID: 54590068042910908}
   - component: {fileID: 114874231866717708}
-  - component: {fileID: 114855428197467294}
   - component: {fileID: 64057648165170214}
   - component: {fileID: 114805403720972730}
-  m_Layer: 0
+  - component: {fileID: 114057270874082472}
+  - component: {fileID: 114318515346340678}
+  m_Layer: 8
   m_Name: WheatCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,18 +135,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114805403720972730
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1960451247877458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114855428197467294
+--- !u!114 &114057270874082472
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -166,6 +156,28 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114318515346340678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960451247877458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114805403720972730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960451247877458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114874231866717708
 MonoBehaviour:
   m_ObjectHideFlags: 1

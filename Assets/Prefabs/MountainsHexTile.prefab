@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23110034143710314}
   - component: {fileID: 95233773993128780}
   - component: {fileID: 114911677320110534}
-  - component: {fileID: 114450771179857112}
   - component: {fileID: 54539514447941892}
   - component: {fileID: 64950802131764756}
   - component: {fileID: 114372259206907450}
   - component: {fileID: 114617348766191358}
   - component: {fileID: 114854358066938648}
-  m_Layer: 0
+  - component: {fileID: 114336613375992896}
+  - component: {fileID: 114980372822413698}
+  m_Layer: 8
   m_Name: MountainsHexTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,19 +137,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114372259206907450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1816561637665504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2918fa60618be44bf8e132af0c42a7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tile_type: 6
---- !u!114 &114450771179857112
+--- !u!114 &114336613375992896
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -169,6 +158,18 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114372259206907450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816561637665504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2918fa60618be44bf8e132af0c42a7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile_type: 6
 --- !u!114 &114617348766191358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,3 +225,14 @@ MonoBehaviour:
     i15: 142
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!114 &114980372822413698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816561637665504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

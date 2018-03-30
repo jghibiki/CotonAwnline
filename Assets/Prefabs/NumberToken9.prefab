@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23048030953974950}
   - component: {fileID: 95835718557595528}
   - component: {fileID: 114146718781993440}
-  - component: {fileID: 114901418522215350}
   - component: {fileID: 54755339738711224}
   - component: {fileID: 64297068733772596}
   - component: {fileID: 114261070769441342}
   - component: {fileID: 114221054343663550}
   - component: {fileID: 114670280305793232}
-  m_Layer: 0
+  - component: {fileID: 114445074057973034}
+  - component: {fileID: 114610795072409774}
+  m_Layer: 8
   m_Name: NumberToken9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,19 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684af3bc5d12a4e628a25daba35c15eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114670280305793232
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1959167966927330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f71e653b203d49e58b901f52c8d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locked: 0
---- !u!114 &114901418522215350
+--- !u!114 &114445074057973034
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -223,3 +212,26 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114610795072409774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959167966927330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114670280305793232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959167966927330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f71e653b203d49e58b901f52c8d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0

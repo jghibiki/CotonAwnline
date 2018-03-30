@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23485852098057678}
   - component: {fileID: 95120227603013390}
   - component: {fileID: 114304573385441476}
-  - component: {fileID: 114639974628114928}
   - component: {fileID: 54687716316054842}
   - component: {fileID: 64396617600126496}
   - component: {fileID: 114950667249291470}
   - component: {fileID: 114483639812637008}
   - component: {fileID: 114877339792995138}
-  m_Layer: 0
+  - component: {fileID: 114777801152555198}
+  - component: {fileID: 114284330542743216}
+  m_Layer: 8
   m_Name: NumberToken5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,6 +137,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114284330542743216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1328928953256012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114304573385441476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114639974628114928
+--- !u!114 &114777801152555198
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

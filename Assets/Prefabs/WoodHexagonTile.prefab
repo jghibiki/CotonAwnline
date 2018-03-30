@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23590927520102616}
   - component: {fileID: 95817142176478880}
   - component: {fileID: 114155652654707656}
-  - component: {fileID: 114433436735463652}
   - component: {fileID: 54954949597997338}
   - component: {fileID: 64095301736367978}
   - component: {fileID: 114122042554150528}
   - component: {fileID: 114465790017508396}
   - component: {fileID: 114919433710258420}
-  m_Layer: 0
+  - component: {fileID: 114507681654573178}
+  - component: {fileID: 114615664832664468}
+  m_Layer: 8
   m_Name: WoodHexagonTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +181,18 @@ MonoBehaviour:
     i15: 164
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &114433436735463652
+--- !u!114 &114465790017508396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462680361889928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114507681654573178
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -201,7 +213,7 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114465790017508396
+--- !u!114 &114615664832664468
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -209,7 +221,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1462680361889928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114919433710258420

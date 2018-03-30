@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23711173023945900}
   - component: {fileID: 95816457124389522}
   - component: {fileID: 114725354956944742}
-  - component: {fileID: 114214073794065008}
   - component: {fileID: 54944143854299170}
   - component: {fileID: 64176402574465706}
   - component: {fileID: 114194509729315514}
   - component: {fileID: 114491563162980740}
   - component: {fileID: 114121718662707832}
-  m_Layer: 0
+  - component: {fileID: 114290462034657224}
+  - component: {fileID: 114260756337344784}
+  m_Layer: 8
   m_Name: NumberToken3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +160,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684af3bc5d12a4e628a25daba35c15eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114214073794065008
+--- !u!114 &114260756337344784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1605005250149146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114290462034657224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

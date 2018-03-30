@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23197307666757766}
   - component: {fileID: 95626443274259364}
   - component: {fileID: 114621395871670112}
-  - component: {fileID: 114381744045629898}
   - component: {fileID: 54896367004284684}
   - component: {fileID: 64431888224941814}
   - component: {fileID: 114424338834918336}
   - component: {fileID: 114588432868709808}
   - component: {fileID: 114539146712362782}
-  m_Layer: 0
+  - component: {fileID: 114069429087539114}
+  - component: {fileID: 114522479993502762}
+  m_Layer: 8
   m_Name: SheepHexTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +137,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114381744045629898
+--- !u!114 &114069429087539114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -169,6 +170,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile_type: 6
+--- !u!114 &114522479993502762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442771492435030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114539146712362782
 MonoBehaviour:
   m_ObjectHideFlags: 1

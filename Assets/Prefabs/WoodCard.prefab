@@ -24,10 +24,11 @@ GameObject:
   - component: {fileID: 95687677205245206}
   - component: {fileID: 54897062684413230}
   - component: {fileID: 114927597226606088}
-  - component: {fileID: 114198921163705016}
   - component: {fileID: 64118243302581652}
   - component: {fileID: 114789136357913182}
-  m_Layer: 0
+  - component: {fileID: 114019804359175438}
+  - component: {fileID: 114737891790858590}
+  m_Layer: 8
   m_Name: WoodCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +135,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114198921163705016
+--- !u!114 &114019804359175438
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -155,6 +156,17 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114737891790858590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198095297239460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114789136357913182
 MonoBehaviour:
   m_ObjectHideFlags: 1

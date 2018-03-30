@@ -101,7 +101,7 @@ MonoBehaviour:
   settlementPrefab: {fileID: 1493869812436114, guid: 161ec84d873cc4cb2af7bae601c1da8d,
     type: 2}
   cityPrefab: {fileID: 1760248154525926, guid: 0ef1a8a426d9f48f2b846f10d080f461, type: 2}
-  grabHeight: 1
+  grabHeight: 2
   player_interaction_mode: 0
 --- !u!114 &114519596646201162
 MonoBehaviour:

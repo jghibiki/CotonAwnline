@@ -24,10 +24,11 @@ GameObject:
   - component: {fileID: 95588129454590690}
   - component: {fileID: 54318275548316124}
   - component: {fileID: 114948525475793436}
-  - component: {fileID: 114219882733080636}
   - component: {fileID: 114825908441080246}
   - component: {fileID: 64364360164210158}
-  m_Layer: 0
+  - component: {fileID: 114050734973392642}
+  - component: {fileID: 114272582163582448}
+  m_Layer: 8
   m_Name: OreCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +135,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114219882733080636
+--- !u!114 &114050734973392642
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -155,6 +156,17 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114272582163582448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1039422028924910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114825908441080246
 MonoBehaviour:
   m_ObjectHideFlags: 1

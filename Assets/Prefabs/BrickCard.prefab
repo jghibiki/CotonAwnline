@@ -23,11 +23,11 @@ GameObject:
   - component: {fileID: 23736006971735986}
   - component: {fileID: 95169950099542160}
   - component: {fileID: 114687508005164402}
-  - component: {fileID: 114104407758999038}
   - component: {fileID: 54392361859906476}
   - component: {fileID: 64098519326305610}
   - component: {fileID: 114163309674270412}
-  m_Layer: 0
+  - component: {fileID: 114103949859200756}
+  m_Layer: 8
   m_Name: BrickCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114104407758999038
+--- !u!114 &114103949859200756
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
-  m_SyncSpin: 1
+  m_SyncSpin: 0
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
   m_SnapThreshold: 5

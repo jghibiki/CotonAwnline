@@ -24,11 +24,12 @@ GameObject:
   - component: {fileID: 95633156946644086}
   - component: {fileID: 54340199901163286}
   - component: {fileID: 114078525465940230}
-  - component: {fileID: 114844858278898154}
   - component: {fileID: 64322724290564038}
   - component: {fileID: 114061128349772926}
   - component: {fileID: 114258844746521146}
-  m_Layer: 0
+  - component: {fileID: 114303974849008170}
+  - component: {fileID: 114243328628149284}
+  m_Layer: 8
   m_Name: City
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,6 +179,17 @@ MonoBehaviour:
     i15: 97
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!114 &114243328628149284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1760248154525926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114258844746521146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,7 +205,7 @@ MonoBehaviour:
   rotation_y: 0
   rotation_z: 0
   disable: 0
---- !u!114 &114844858278898154
+--- !u!114 &114303974849008170
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
