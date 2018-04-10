@@ -18,4 +18,8 @@ public class MenuUI : MonoBehaviour {
     {
         Application.Quit();
     }
+
+	public void StartGame(){
+		Application.LoadLevel("MainScene");
+	}
 }
