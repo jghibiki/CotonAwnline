@@ -22,13 +22,12 @@ GameObject:
   - component: {fileID: 33119646444078634}
   - component: {fileID: 23841898230056958}
   - component: {fileID: 95917677929600154}
-  - component: {fileID: 64550130092168490}
   - component: {fileID: 114158598122340692}
   - component: {fileID: 54020095363873172}
   - component: {fileID: 114890062667519848}
   - component: {fileID: 114406679739447092}
   - component: {fileID: 114821473034014736}
-  - component: {fileID: 114527417986446252}
+  - component: {fileID: 65841804213375678}
   m_Layer: 8
   m_Name: Die
   m_TagString: Untagged
@@ -105,20 +104,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64550130092168490
-MeshCollider:
+--- !u!65 &65841804213375678
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1850183181430784}
-  m_Material: {fileID: 13400000, guid: b186a0a21c8f9439498247cb0f71cb0c, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.05
-  m_Mesh: {fileID: 4300000, guid: 3638d68a106144b6d8a6fcc3373263a0, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.0000005, z: 2.0000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95917677929600154
 Animator:
   serializedVersion: 3
@@ -167,7 +164,7 @@ MonoBehaviour:
     i14: 244
     i15: 105
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114406679739447092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,17 +174,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cb778ababd4549ba8c7b99422bc7ba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114527417986446252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1850183181430784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114821473034014736

@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.EventSystems;
 
 
-public class PlayerInteract : NetworkBehaviour {
+public class PlayerInteract : ClientAuthorityManager {
 
 	public GameObject diePrefab;
 
@@ -409,11 +409,9 @@ public class PlayerInteract : NetworkBehaviour {
 					objectBeingDragged.rotation = Quaternion.Euler(rotation.eulerAngles.x+180, rotation.eulerAngles.y, rotation.eulerAngles.z);
 				}
 
-				var sync_transform = objectBeingDragged.GetComponent<SyncTransform>();
-				if(sync_transform != null){
-					CmdSetAuth(objectBeingDragged.GetComponent<NetworkIdentity>().netId, GetComponent<NetworkIdentity>());
-					sync_transform.OnMouseDrag();
-				}
+
+				CmdSetAuth(objectBeingDragged.GetComponent<NetworkIdentity>().netId, GetComponent<NetworkIdentity>());
+
 
 			}
 		}
@@ -591,24 +589,7 @@ public class PlayerInteract : NetworkBehaviour {
 		NetworkServer.Spawn(obj);
 	}
 
-	[Command]
-     public void CmdSetAuth(NetworkInstanceId objectId, NetworkIdentity player)
-     {
-         var iObject = NetworkServer.FindLocalObject(objectId);
-         var networkIdentity = iObject.GetComponent<NetworkIdentity>();
-         var otherOwner = networkIdentity.clientAuthorityOwner;        
- 
-         if (otherOwner == player.connectionToClient)
-         {
-             return;
-         }else
-         {
-             if (otherOwner != null)
-             {
-                 networkIdentity.RemoveClientAuthority(otherOwner);
-             }
-             networkIdentity.AssignClientAuthority(player.connectionToClient);
-         }        
-     }
+
+
 
 }

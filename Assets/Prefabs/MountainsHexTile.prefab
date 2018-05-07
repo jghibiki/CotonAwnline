@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 114617348766191358}
   - component: {fileID: 114854358066938648}
   - component: {fileID: 114336613375992896}
-  - component: {fileID: 114980372822413698}
   m_Layer: 8
   m_Name: MountainsHexTile
   m_TagString: Untagged
@@ -224,15 +223,4 @@ MonoBehaviour:
     i14: 60
     i15: 142
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114980372822413698
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1816561637665504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_LocalPlayerAuthority: 1

@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 114465790017508396}
   - component: {fileID: 114919433710258420}
   - component: {fileID: 114507681654573178}
-  - component: {fileID: 114615664832664468}
   m_Layer: 8
   m_Name: WoodHexagonTile
   m_TagString: Untagged
@@ -180,7 +179,7 @@ MonoBehaviour:
     i14: 54
     i15: 164
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114465790017508396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,17 +212,6 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114615664832664468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462680361889928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114919433710258420
 MonoBehaviour:
   m_ObjectHideFlags: 1

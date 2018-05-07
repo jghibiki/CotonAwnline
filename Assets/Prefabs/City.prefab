@@ -28,7 +28,6 @@ GameObject:
   - component: {fileID: 114061128349772926}
   - component: {fileID: 114258844746521146}
   - component: {fileID: 114303974849008170}
-  - component: {fileID: 114243328628149284}
   m_Layer: 8
   m_Name: City
   m_TagString: Untagged
@@ -178,18 +177,7 @@ MonoBehaviour:
     i14: 244
     i15: 97
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114243328628149284
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1760248154525926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114258844746521146
 MonoBehaviour:
   m_ObjectHideFlags: 1

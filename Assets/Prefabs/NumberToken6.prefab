@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 114054291521268530}
   - component: {fileID: 114790600226632018}
   - component: {fileID: 114474687408529244}
-  - component: {fileID: 114640131302967380}
   m_Layer: 8
   m_Name: NumberToken6
   m_TagString: Untagged
@@ -179,7 +178,7 @@ MonoBehaviour:
     i14: 115
     i15: 183
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114260670040997756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,17 +211,6 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114640131302967380
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325364142220044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5e537bf35204bc59cab1eff0ce5f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114790600226632018
 MonoBehaviour:
   m_ObjectHideFlags: 1
